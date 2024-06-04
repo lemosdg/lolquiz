@@ -2,17 +2,17 @@
     "piezas": [
         {
             "nombre": "Brillo",
-            "img": "favicon.ico",
+            "img": "/imagenes/brillo.jpg",
             "precio": "900"
         },
         {
             "nombre": "Espadon",
-            "img": "favicon.ico",
+            "img": "/imagenes/espadon.jpg",
             "precio": "1300"
         },
         {
             "nombre": "Daga Dentada",
-            "img": "favicon.ico",
+            "img": "/imagenes/daga-dentada.jpg",
             "precio": "1000"
         }
     ]
