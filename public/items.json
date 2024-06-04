@@ -1,0 +1,19 @@
+{
+    "piezas": [
+        {
+            "nombre": "Brillo",
+            "img": "favicon.ico",
+            "precio": "900"
+        },
+        {
+            "nombre": "Espadon",
+            "img": "favicon.ico",
+            "precio": "1300"
+        },
+        {
+            "nombre": "Daga Dentada",
+            "img": "favicon.ico",
+            "precio": "1000"
+        }
+    ]
+}
