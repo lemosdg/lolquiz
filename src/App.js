@@ -1,9 +1,10 @@
 import './App.css';
-import Conexion from './componentes/conexion';
+import React from "react";
+import Pregunta from './componentes/pregunta';
 
 function App() {
   return (
-    <Conexion />
+    <Pregunta />
   );
 }
 
