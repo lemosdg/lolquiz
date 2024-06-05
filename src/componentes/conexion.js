@@ -11,16 +11,7 @@ function Conexion() {
   }, []);
 
   return (
-    <div>
-      <h1>Lista de Items</h1>
-      <ul>
-        {items.map((item, index) => (
-          <li key={index}>
-            Nombre: {item.nombre}, Edad: {item.precio}
-          </li>
-        ))}
-      </ul>
-    </div>
+    items
   );
 }
 
