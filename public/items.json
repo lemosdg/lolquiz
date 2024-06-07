@@ -19,6 +19,12 @@
             "precio": "1000"
         },
         {
+            "nombre": "Guardabrazo del Buscador",
+            "level": 2,
+            "img": "/imagenes/guardabrazo.jpg",
+            "precio": "1600"
+        },
+        {
             "nombre": "Capa de Agilidad",
             "level": 1,
             "img": "/imagenes/capa-agilidad.jpg",
