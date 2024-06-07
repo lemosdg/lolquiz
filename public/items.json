@@ -2,18 +2,39 @@
     "items": [
         {
             "nombre": "Brillo",
+            "level": 1,
             "img": "/imagenes/brillo.jpg",
             "precio": "900"
         },
         {
             "nombre": "Espadon",
+            "level": 1,
             "img": "/imagenes/espadon.jpg",
             "precio": "1300"
         },
         {
             "nombre": "Daga Dentada",
+            "level": 1,
             "img": "/imagenes/daga-dentada.jpg",
             "precio": "1000"
+        },
+        {
+            "nombre": "Capa de Agilidad",
+            "level": 1,
+            "img": "/imagenes/capa-agilidad.jpg",
+            "precio": "600"
+        },
+        {
+            "nombre": "Vara Innecesariamente Grande",
+            "level": 1,
+            "img": "/imagenes/vara-innecesaria.jpg",
+            "precio": "1250"
+        },
+        {
+            "nombre": "Filo del Infinito",
+            "level": 2,
+            "img": "/imagenes/filo-infinito.jpg",
+            "precio": "3400"
         }
     ]
 }

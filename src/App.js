@@ -1,10 +1,12 @@
-import './App.css';
-import React from "react";
-import Pregunta from './componentes/pregunta';
+import React, { useState } from "react";
+import Niveles from './componentes/niveles';
 
 function App() {
+
   return (
-    <Pregunta />
+    <div>
+      <Niveles />
+    </div>
   );
 }
 

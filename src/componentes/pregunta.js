@@ -1,8 +1,6 @@
 import React, {useState} from "react";
-import Conexion from "./conexion";
 
-function Pregunta(){
-    const items = Conexion();
+function Pregunta({ itemsFiltrados }){
     const [precioIngresado, setPrecioIngresado] = useState("");
     const [num, setNum] = useState(0)
 
@@ -10,8 +8,8 @@ function Pregunta(){
         setPrecioIngresado(event.target.value);
         const precioIngresadoNumero = parseFloat(precioIngresado);
 
-        if (!isNaN(precioIngresadoNumero) && items.length > 0) {
-            const precioItem = parseFloat(items[num].precio);
+        if (!isNaN(precioIngresadoNumero) && itemsFiltrados.length > 0) {
+            const precioItem = parseFloat(itemsFiltrados[num].precio);
 
             if (precioIngresadoNumero === precioItem) {
                 alert("¡Correcto!");
@@ -26,13 +24,15 @@ function Pregunta(){
     };
 
     const cambiar = () => {
-        const nuevoNum = Math.floor(Math.random() * items.length);
+        const nuevoNum = Math.floor(Math.random() * itemsFiltrados.length);
         setNum(nuevoNum); 
     };
 
+    
+
     return(
         <div>
-            {items.length > 0 && <img src={items[num].img} />}
+            {itemsFiltrados.length > 0 && itemsFiltrados[num].level === 1 && <img src={itemsFiltrados[num].img} alt="Objeto" />}
             <p>Cuanto cuesta este objeto?</p>
             <input type="text" value={precioIngresado} onChange={handleInputChange} />
             <button onClick={comparacion}>Comprobar Precio</button>
