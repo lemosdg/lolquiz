@@ -1,9 +1,10 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { AppContext } from './AppContext';
 
 function Pregunta({ lista }){
     const [precioIngresado, setPrecioIngresado] = useState("");
     const [num, setNum] = useState(0)
-    const [puntuacion, setPuntuacion] = useState(0);
+    const { puntuacion, setPuntuacion } = useContext(AppContext);
 
     const comparacion = (event) => {
         setPrecioIngresado(event.target.value);
@@ -30,9 +31,9 @@ function Pregunta({ lista }){
         setNum(nuevoNum); 
     };
 
-    useEffect(() => {
-        console.log("puntuacion = " + puntuacion);
-    }, [comparacion]); 
+    // useEffect(() => {
+    //     console.log("puntuacion = " + puntuacion);
+    // }, [puntuacion]); 
 
     return(
         <div>
