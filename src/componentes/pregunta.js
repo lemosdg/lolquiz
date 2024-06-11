@@ -3,6 +3,7 @@ import React, { useEffect, useState} from "react";
 function Pregunta({ lista }){
     const [precioIngresado, setPrecioIngresado] = useState("");
     const [num, setNum] = useState(0)
+    const [puntuacion, setPuntuacion] = useState(0);
 
     const comparacion = (event) => {
         setPrecioIngresado(event.target.value);
@@ -13,6 +14,7 @@ function Pregunta({ lista }){
 
             if (precioIngresadoNumero === precioItem) {
                 alert("¡Correcto!");
+                setPuntuacion(puntuacion + 1);
             } else {
                 alert("Incorrecto. Inténtalo de nuevo.");
             }
@@ -29,8 +31,8 @@ function Pregunta({ lista }){
     };
 
     useEffect(() => {
-        console.log(lista);
-    }, [lista]); 
+        console.log("puntuacion = " + puntuacion);
+    }, [comparacion]); 
 
     return(
         <div>
