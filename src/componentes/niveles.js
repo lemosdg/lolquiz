@@ -8,10 +8,13 @@ function Niveles() {
   const [nivelActual, setNivelActual] = useState(0)
   const [itemsFiltrados, setItemsFiltrados] = useState([])
   const { puntuacion, setPuntuacion } = useContext(AppContext)
+  const objetivos = [0, 15, 30]
 
   function cambiarNivel(event) {
     const nivel = parseInt(event.target.value)
-    setNivelActual(nivel)
+    if (puntuacion >= objetivos[nivel - 1]) {
+      setNivelActual(nivel)
+    }
   }
 
   useEffect(() => {
