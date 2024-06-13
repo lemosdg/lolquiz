@@ -5,6 +5,7 @@ function Pregunta({ lista }) {
   const [precioIngresado, setPrecioIngresado] = useState('')
   const [num, setNum] = useState(0)
   const { puntuacion, setPuntuacion } = useContext(AppContext)
+  const savedPuntuacion = localStorage.getItem('miPuntuacion')
 
   const comparacion = (event) => {
     setPrecioIngresado(event.target.value)
@@ -31,9 +32,11 @@ function Pregunta({ lista }) {
     setNum(nuevoNum)
   }
 
-  // useEffect(() => {
-  //     console.log("puntuacion = " + puntuacion);
-  // }, [puntuacion]);
+  useEffect(() => {
+    console.log('puntuacion = ' + puntuacion)
+    localStorage.setItem('miPuntuacion', puntuacion)
+    console.log('savedPuntuacion = ' + savedPuntuacion)
+  }, [puntuacion])
 
   return (
     <div>
