@@ -8,7 +8,7 @@ function Niveles() {
   const [nivelActual, setNivelActual] = useState(0)
   const [itemsFiltrados, setItemsFiltrados] = useState([])
   const { puntuacion, setPuntuacion } = useContext(AppContext)
-  const objetivos = [0, 15, 30]
+  const objetivos = [0, 0, 0]
 
   function cambiarNivel(event) {
     const nivel = parseInt(event.target.value)

@@ -5,10 +5,8 @@ function Pregunta({ lista }) {
   const [precioIngresado, setPrecioIngresado] = useState('')
   const [num, setNum] = useState(0)
   const { puntuacion, setPuntuacion } = useContext(AppContext)
-  const savedPuntuacion = localStorage.getItem('miPuntuacion')
 
   const comparacion = (event) => {
-    setPrecioIngresado(event.target.value)
     const precioIngresadoNumero = parseFloat(precioIngresado)
 
     if (!isNaN(precioIngresadoNumero) && lista.length > 0) {
@@ -16,7 +14,7 @@ function Pregunta({ lista }) {
 
       if (precioIngresadoNumero === precioItem) {
         alert('¡Correcto!')
-        setPuntuacion(puntuacion + 1)
+        setPuntuacion((prevPuntuacion) => prevPuntuacion + 1)
       } else {
         alert('Incorrecto. Inténtalo de nuevo.')
       }
@@ -31,12 +29,6 @@ function Pregunta({ lista }) {
     const nuevoNum = Math.floor(Math.random() * lista.length)
     setNum(nuevoNum)
   }
-
-  useEffect(() => {
-    console.log('puntuacion = ' + puntuacion)
-    localStorage.setItem('miPuntuacion', puntuacion)
-    console.log('savedPuntuacion = ' + savedPuntuacion)
-  }, [puntuacion])
 
   return (
     <div>
