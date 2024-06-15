@@ -1,12 +1,15 @@
 import React, { useEffect, useState, useContext } from 'react'
+import { useLocation } from 'react-router-dom'
 import { AppContext } from './AppContext'
 
-function Pregunta({ lista }) {
+function Pregunta() {
+  const location = useLocation()
+  const { lista } = location.state || { lista: [] }
   const [precioIngresado, setPrecioIngresado] = useState('')
   const [num, setNum] = useState(0)
   const { puntuacion, setPuntuacion } = useContext(AppContext)
 
-  const comparacion = (event) => {
+  const comparacion = () => {
     const precioIngresadoNumero = parseFloat(precioIngresado)
 
     if (!isNaN(precioIngresadoNumero) && lista.length > 0) {
