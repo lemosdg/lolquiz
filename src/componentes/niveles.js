@@ -19,8 +19,14 @@ function Niveles() {
 
   return (
     <div className="menuDiv">
-      <button onClick={() => cambiarNivel(1)}>Nivel 1</button>
-      <button onClick={() => cambiarNivel(2)}>Nivel 2</button>
+      <div className="botonLine">
+        <button onClick={() => cambiarNivel(1)}>Nivel 1</button>
+        <div className="requisitos">{objetivos[0]} necesarios</div>
+      </div>
+      <div className="botonLine">
+        <button onClick={() => cambiarNivel(2)}>Nivel 2</button>
+        <div className="requisitos">{objetivos[1]} necesarios</div>
+      </div>
     </div>
   )
 }

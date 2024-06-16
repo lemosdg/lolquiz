@@ -17,10 +17,14 @@ body {
   text-align: center;
 }
 
+.botonLine {
+  display: flex;
+  align-items: center;
+}
+
 button {
   width: 40%;
   height: 45px;
-  display: block;
   margin-bottom: 20px;
   margin-left: 20px;
   padding: 10px;
@@ -28,4 +32,15 @@ button {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.requisitos {
+  width: 30%;
+  height: 25px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  padding: 10px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 10px;
 }
