@@ -1,0 +1,31 @@
+body {
+  height: 100%;
+  background-color: rgb(21, 98, 199);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 30%;
+  margin-top: 200px;
+}
+
+.menuDiv {
+  background-color: aliceblue;
+  padding: 50px;
+  text-align: center;
+}
+
+button {
+  width: 40%;
+  height: 45px;
+  display: block;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding: 10px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}

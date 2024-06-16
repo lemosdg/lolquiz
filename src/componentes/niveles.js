@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react'
 import Conexion from './conexion'
 import { AppContext } from './AppContext'
 import { useNavigate } from 'react-router-dom'
+import '../estilos/niveles.css'
 
 function Niveles() {
   const items = Conexion()
@@ -17,7 +18,7 @@ function Niveles() {
   }
 
   return (
-    <div>
+    <div className="menuDiv">
       <button onClick={() => cambiarNivel(1)}>Nivel 1</button>
       <button onClick={() => cambiarNivel(2)}>Nivel 2</button>
     </div>
