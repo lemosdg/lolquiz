@@ -1,6 +1,48 @@
 {
   "items": [
     {
+      "nombre": "Preferencia",
+      "level": 2,
+      "img": "/imagenes/cull.png",
+      "precio": "450"
+    },
+    {
+      "nombre": "Sello Oscuro",
+      "level": 1,
+      "img": "/imagenes/sello-oscuro.jpg",
+      "precio": "350"
+    },
+    {
+      "nombre": "Espada de Doran",
+      "level": 1,
+      "img": "/imagenes/espada-doran.png",
+      "precio": "450"
+    },
+    {
+      "nombre": "Anillo de Doran",
+      "level": 3,
+      "img": "/imagenes/dorans-ring.png",
+      "precio": "400"
+    },
+    {
+      "nombre": "Escudo de Doran",
+      "level": 2,
+      "img": "/imagenes/escudo-doran.jpg",
+      "precio": "450"
+    },
+    {
+      "nombre": "Espada del Guardian",
+      "level": 1,
+      "img": "/imagenes/guardians-blade.png",
+      "precio": "950"
+    },
+    {
+      "nombre": "Martillo del Guardian",
+      "level": 3,
+      "img": "/imagenes/guardians-hammer.jpg",
+      "precio": "950"
+    },
+    {
       "nombre": "Brillo",
       "level": 1,
       "img": "/imagenes/brillo.jpg",
