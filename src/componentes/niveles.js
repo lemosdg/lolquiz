@@ -1,18 +1,19 @@
 import React, { useEffect, useState, useContext } from 'react'
-import Conexion from './conexion'
+import ItemList from './itemlist'
 import { AppContext } from './AppContext'
 import { useNavigate } from 'react-router-dom'
 import '../estilos/niveles.css'
 
 function Niveles() {
-  const items = Conexion()
+  const items = ItemList()
   const { puntuacion } = useContext(AppContext)
   const objetivos = [0, 0, 0]
   const navigate = useNavigate()
 
   const cambiarNivel = (nivel) => {
     if (puntuacion >= objetivos[nivel - 1]) {
-      const filtrados = items.filter((item) => item.level === nivel)
+      const iterador = 20 * nivel
+      const filtrados = items.slice(iterador - 20, iterador)
       navigate('/pregunta', { state: { lista: filtrados } })
     }
   }

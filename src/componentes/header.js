@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useContext } from 'react'
-import Conexion from './conexion'
 import { AppContext } from './AppContext'
 import { useNavigate } from 'react-router-dom'
 import '../estilos/header.css'

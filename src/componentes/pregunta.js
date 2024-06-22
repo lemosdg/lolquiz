@@ -13,7 +13,7 @@ function Pregunta() {
     const precioIngresadoNumero = parseFloat(precioIngresado)
 
     if (!isNaN(precioIngresadoNumero) && lista.length > 0) {
-      const precioItem = parseFloat(lista[num].precio)
+      const precioItem = parseFloat(lista[num].gold.total)
 
       if (precioIngresadoNumero === precioItem) {
         alert('¡Correcto!')
@@ -33,9 +33,12 @@ function Pregunta() {
     setNum(nuevoNum)
   }
 
+  const imageUrlBase = 'http://ddragon.leagueoflegends.com/cdn/10.6.1/img/item/'
+
   return (
     <div>
-      {lista.length > 0 && <img src={lista[num].img} alt="Objeto" />}
+      <img src={`${imageUrlBase}${lista[num].image.full}`} alt={lista.name} />
+      <p>{lista[num].name}</p>
       <p>Cuanto cuesta este objeto?</p>
       <input type="text" value={precioIngresado} onChange={handleInputChange} />
       <button onClick={comparacion}>Comprobar Precio</button>
